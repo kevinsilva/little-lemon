@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10rem;
+}
+
+.logo-link {
+  margin-right: 10rem;
+}
+
+.primary-logo {
+  height: 6rem;
+}
+
+.header__list {
+  display: flex;
+  align-items: center;
+}
+
+.header__item {
+  margin-right: 2rem;
+}
+
+.header__link--button {
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--color-highlight-1);
+  background-color: var(--color-primary-1);
+}
+
+.basket-icon {
+  width: 3rem;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}

@@ -1,0 +1,66 @@
+.hero {
+  display: flex;
+  justify-content: center;
+  color: var(--color-highlight-1);
+  background-color: var(--color-primary-1);
+  position: relative;
+  height: 35rem;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0rem;
+  right: 10rem;
+  width: 10%;
+  height: 100%;
+  background-image: url(../assets/green_lemon.png);
+  background-size: 15rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: invert(50%) sepia(7%) saturate(413%) hue-rotate(100deg)
+    brightness(97%) contrast(90%);
+  transform: scaleX(-1) rotate(-20deg);
+}
+
+.hero__content {
+  margin-right: 20rem;
+}
+
+.hero__image {
+  width: 30rem;
+  height: 35rem;
+  border-radius: 1rem;
+  position: relative;
+  top: 5rem;
+  z-index: 2;
+}
+
+.hero__title {
+  font-family: 'Markazi Text';
+  font-size: 64px;
+  font-weight: 400;
+  color: var(--color-primary-2);
+  position: relative;
+  top: 2rem;
+}
+
+.hero__subtitle {
+  font-family: 'Markazi Text';
+  font-weight: 400;
+  font-size: 40px;
+}
+
+.hero__description {
+  width: 25rem;
+  margin-bottom: 2rem;
+}
+
+.hero__button {
+  border: none;
+  display: inline-block;
+  padding: 0.5rem 1.5rem;
+  border-radius: 2rem;
+  color: var(--color-highlight-2);
+  background-color: var(--color-primary-2);
+}

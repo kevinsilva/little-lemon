@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&family=Markazi+Text:wght@400;500&display=swap');
+
+:root {
+  --color-primary-1: rgb(73, 94, 87);
+  --color-primary-2: rgb(244, 206, 20);
+  --color-secondary-1: rgb(238, 153, 114);
+  --color-secondary-2: rgb(251, 218, 187);
+  --color-highlight-1: rgb(237, 239, 238);
+  --color-highlight-2: rgb(51, 51, 51);
+
+  /* --type-title: 40pt;
+  --type-lead: 18pt;
+  --type-text: 16pt;
+*/
+  --type-title: 40px;
+  --type-lead: 18px;
+  --type-text: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'karla', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: var(--type-text);
+  color: var(--color-highlight-2);
+  line-height: 1.5;
+}
+
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
