@@ -1,5 +1,4 @@
 import logo from '../assets/logo.svg';
-import basket from '../assets/basket.svg';
 import '../styles/Header.css';
 
 function Header() {
@@ -8,7 +7,11 @@ function Header() {
       <a href="/" className="logo-link">
         <img src={logo} alt="logo" className="primary-logo" />
       </a>
-      <nav className="header__navbar">
+      <input type="checkbox" className="menu__checkbox" id="menu-toggle" />
+      <label htmlFor="menu-toggle" className="menu__button">
+        <span class="menu__icon">&nbsp;</span>
+      </label>
+      <nav className="header__nav">
         <ul className="header__list">
           <li className="header__item">
             <a href="/" className="header__link">
@@ -35,16 +38,8 @@ function Header() {
               Login
             </a>
           </li>
-          <li className="header__item">
-            <a href="/order.html" className="header__link header__link--button">
-              Order Online
-            </a>
-          </li>
         </ul>
       </nav>
-      <button className="basket-icon">
-        <img src={basket} alt="basket-icon" />
-      </button>
     </header>
   );
 }

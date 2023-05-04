@@ -1,56 +1,83 @@
+import Logo3 from '../assets/logo_3.png';
+import '../styles/Footer.css';
+
 function Footer() {
   return (
-    <footer>
-      <img src="" alt="logo" />
-      <nav>
-        <section>
-          <h4>Doormat Navigation</h4>
-          <ul>
-            <li>
-              <a href="#">Home</a>
+    <footer className="footer">
+      <img src={Logo3} alt="logo" className="footer__logo" />
+      <nav className="footer__nav">
+        <section className="footer__nav-section">
+          <h4 className="footer__nav-section-title">Navigation</h4>
+          <ul className="footer__nav-section-list">
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/home.html">
+                Home
+              </a>
             </li>
-            <li>
-              <a href="#">About</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/about.html">
+                About
+              </a>
             </li>
-            <li>
-              <a href="#">Menu</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/menu.html">
+                Menu
+              </a>
             </li>
-            <li>
-              <a href="#">Reservations</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/reservations.html">
+                Reservations
+              </a>
             </li>
-            <li>
-              <a href="#">Order Online</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/order.html">
+                Order Online
+              </a>
             </li>
-            <li>
-              <a href="#">Login</a>
-            </li>
-          </ul>
-        </section>
-        <section>
-          <h4>Contact</h4>
-          <ul>
-            <li>
-              <a href="#">Address</a>
-            </li>
-            <li>
-              <a href="#">Phone Number</a>
-            </li>
-            <li>
-              <a href="#">Email</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/login.html">
+                Login
+              </a>
             </li>
           </ul>
         </section>
-        <section>
-          <h4>Social Media Links</h4>
-          <ul>
-            <li>
-              <a href="#">Address</a>
+        <section className="footer__nav-section">
+          <h4 className="footer__nav-section-title">Contact</h4>
+          <ul className="footer__nav-section-list">
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/address.html">
+                Address
+              </a>
             </li>
-            <li>
-              <a href="#">Phone Number</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/phone.html">
+                Phone Number
+              </a>
             </li>
-            <li>
-              <a href="#">Email</a>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/email.html">
+                Email
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section className="footer__nav-section">
+          <h4 className="footer__nav-section-title">Social Media</h4>
+          <ul className="footer__nav-section-list">
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/address.html">
+                Address
+              </a>
+            </li>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/phone.html">
+                Phone Number
+              </a>
+            </li>
+            <li className="footer__nav-section-item">
+              <a className="footer__nav-section-link" href="/email.html">
+                Email
+              </a>
             </li>
           </ul>
         </section>

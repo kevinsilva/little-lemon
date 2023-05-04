@@ -1,68 +1,82 @@
+import greekSalad from '../assets/greek_salad.jpg';
+import bruschetta from '../assets/bruchetta.svg';
+import lemonDessert from '../assets/lemon_dessert.jpg';
+import '../styles/Highlights.css';
+
 function Highlights() {
   return (
-    <section>
-      <div className="highlights-header">
-        <h2>Specials</h2>
-        <button>Menu</button>
+    <section className="highlights">
+      <div className="highlights__header">
+        <h2 className="highlights__title">This Week's Specials</h2>
+        <button className="primary-button primary-button--yellow">Menu</button>
       </div>
-      <div className="highlights-content">
-        <div className="highlights-card">
-          <div className="card-image">
-            <img src="" alt="card" />
+      <div className="highlights__content">
+        <div className="highlights__card">
+          <div className="highlights__card-image-container">
+            <img
+              src={greekSalad}
+              alt="Greek Salad"
+              className="highlights__card-image"
+            />
           </div>
-          <div className="card-content">
-            <div className="card-header">
-              <h4>Greek Salad</h4>
-              <p>10.99$</p>
+          <div className="highlights__card-content">
+            <div className="highlights__card-header">
+              <h4 className="highlights__card-title">Greek Salad</h4>
+              <p className="highlights__card-price">10.99$</p>
             </div>
-            <div className="card-main">
-              <p>
+            <div className="highlights__card-main">
+              <p className="highlights__card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
-                illo vero ullam autem fugit placeat illum fugiat, necessitatibus
-                adipisci ipsa dicta id tempore.
+                illo vero ullam autem fugit placeat.
               </p>
-              <button>Order a delivery</button>
+              <button className="primary-button">Order a delivery</button>
             </div>
           </div>
         </div>
-        <div className="highlights-card">
-          <div className="card-image">
-            <img src="" alt="card" />
+        <div className="highlights__card">
+          <div className="highlights__card-image-container">
+            <img
+              src={bruschetta}
+              alt="Bruschetta"
+              className="highlights__card-image"
+            />
           </div>
-          <div className="card-content">
-            <div className="card-header">
-              <h4>Bruschetta</h4>
-              <p>10.99$</p>
+          <div className="highlights__card-content">
+            <div className="highlights__card-header">
+              <h4 className="highlights__card-title">Bruschetta</h4>
+              <p className="highlights__card-price">10.99$</p>
             </div>
-            <div className="card-main">
-              <p>
+            <div className="highlights__card-main">
+              <p className="highlights__card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
-                illo vero ullam autem fugit placeat illum fugiat, necessitatibus
-                adipisci ipsa dicta id tempore.
+                illo vero ullam autem fugit placeat.
               </p>
-              <button>Order a delivery</button>
+              <button className="primary-button">Order a delivery</button>
             </div>
           </div>
         </div>
-        <div className="highlights-card">
-          <div className="card-image">
-            <img src="" alt="card" />
+        <div className="highlights__card">
+          <div className="highlights__card-image-container">
+            <img
+              src={lemonDessert}
+              alt="Lemon Dessert"
+              className="highlights__card-image"
+            />
           </div>
-          <div className="card-content">
-            <div className="card-header">
-              <h4>Lemon Dessert</h4>
-              <p>10.99$</p>
+          <div className="highlights__card-content">
+            <div className="highlights__card-header">
+              <h4 className="highlights__card-title">Lemon Dessert</h4>
+              <p className="highlights__card-price">10.99$</p>
             </div>
-            <div className="card-main">
-              <p>
+            <div className="highlights__card-main">
+              <p className="highlights__card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
-                illo vero ullam autem fugit placeat illum fugiat, necessitatibus
-                adipisci ipsa dicta id tempore.
+                illo vero ullam autem fugit placeat.
               </p>
-              <button>Order a delivery</button>
+              <button className="primary-button">Order a delivery</button>
             </div>
           </div>
         </div>

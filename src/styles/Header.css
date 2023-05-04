@@ -1,8 +1,9 @@
 .header {
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 10rem;
+  margin-bottom: 10rem;
 }
 
 .logo-link {
@@ -10,24 +11,29 @@
 }
 
 .primary-logo {
+  min-width: 22.2rem;
   height: 6rem;
+  position: relative;
+  z-index: 4;
+}
+
+.header__nav {
+  display: flex;
 }
 
 .header__list {
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 4;
 }
 
 .header__item {
   margin-right: 2rem;
 }
 
-.header__link--button {
-  display: inline-block;
-  padding: 0.5rem 1.5rem;
-  border-radius: 2rem;
-  color: var(--color-highlight-1);
-  background-color: var(--color-primary-1);
+.header__item:hover {
+  border-bottom: 0.1rem solid var(--color-highlight-2);
 }
 
 .basket-icon {
@@ -35,4 +41,97 @@
   border: none;
   background-color: transparent;
   cursor: pointer;
+}
+
+.menu__checkbox {
+  display: none;
+}
+
+.menu__button {
+  display: none;
+  order: 2;
+  padding: 2rem;
+  cursor: pointer;
+}
+
+.menu__icon,
+.menu__icon::before,
+.menu__icon::after {
+  width: 2.5rem;
+  height: 0.3rem;
+  background-color: var(--color-highlight-2);
+  display: inline-block;
+  position: relative;
+}
+
+.menu__icon::before,
+.menu__icon::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  transition: all 0.2s;
+}
+
+.menu__icon::before {
+  top: -0.8rem;
+}
+
+.menu__icon::after {
+  top: 0.8rem;
+}
+
+.menu__checkbox:checked ~ .header__nav {
+  display: flex;
+  position: absolute;
+  top: 10rem;
+}
+
+.menu__checkbox:checked ~ .header__nav .header__list {
+  background-color: var(--color-primary-1);
+  color: var(--color-highlight-1);
+  width: 100vw;
+  height: 5rem;
+  justify-content: center;
+}
+
+.menu__checkbox:checked + .menu__button .menu__icon {
+  background-color: transparent;
+}
+
+.menu__checkbox:checked + .menu__button .menu__icon::before {
+  top: 0;
+  transform: rotate(135deg);
+}
+
+.menu__checkbox:checked + .menu__button .menu__icon::after {
+  top: 0;
+  transform: rotate(-135deg);
+}
+
+.menu__background {
+  width: 100vw;
+  height: 100vh;
+  background-color: white;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: none;
+}
+
+@media only screen and (max-width: 62.5em) {
+  .header {
+    margin-bottom: 24rem;
+  }
+  .header__nav {
+    display: none;
+  }
+
+  .menu__button {
+    display: flex;
+  }
+
+  .header__item:hover {
+    border-bottom: 0.1rem solid white;
+  }
 }
