@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import restaurantFood from '../assets/restauranfood.jpg';
 import restaurant from '../assets/restaurant.jpg';
 import chefs from '../assets/chefs.jpg';
@@ -14,7 +15,7 @@ function Hero() {
           recipes served with a modern twist.
         </p>
         <button className="primary-button primary-button--yellow">
-          Reserve a table
+          <Link to="/reservation">Reserve a table</Link>
         </button>
       </div>
       <div className="hero__image-container">

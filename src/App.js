@@ -1,17 +1,16 @@
-import Header from './components/Header';
-import Hero from './components/Hero';
-import Highlights from './components/Highlights';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import HomePage from './components/HomePage';
+import ReservationPage from './components/ReservationPage';
 import './App.css';
 
 function App() {
   return (
-    <>
-      <Header />
-      <Hero />
-      <Highlights />
-      <Footer />
-    </>
+    <Router>
+      <Routes>
+         <Route path="/" element={<HomePage />}></Route>
+        <Route path="/reservation" element={<ReservationPage />}></Route>
+      </Routes>
+    </Router>
   );
 }
 
