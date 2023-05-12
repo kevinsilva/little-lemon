@@ -26,7 +26,7 @@ function Footer() {
               </a>
             </li>
             <li className="footer__nav-section-item">
-              <Link to="/reservation" className="footer__nav-section-link">
+              <Link to="/booking" className="footer__nav-section-link">
                 Reservations
               </Link>
             </li>

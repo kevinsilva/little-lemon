@@ -10,7 +10,7 @@ function Header() {
       </Link>
       <input type="checkbox" className="menu__checkbox" id="menu-toggle" />
       <label htmlFor="menu-toggle" className="menu__button">
-        <span class="menu__icon">&nbsp;</span>
+        <span className="menu__icon">&nbsp;</span>
       </label>
       <nav className="header__nav">
         <ul className="header__list">
@@ -30,7 +30,7 @@ function Header() {
             </a>
           </li>
           <li className="header__item">
-            <Link to="/reservation" className="header__link">
+            <Link to="/booking" className="header__link">
               Reservations
             </Link>
           </li>

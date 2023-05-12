@@ -3,7 +3,7 @@ import Hero from './Hero';
 import Highlights from './Highlights';
 import Footer from './Footer';
 
-function HomePage() {
+function Main() {
   return (
     <>
       <Header />
@@ -14,4 +14,4 @@ function HomePage() {
   );
 }
 
-export default HomePage;
+export default Main;

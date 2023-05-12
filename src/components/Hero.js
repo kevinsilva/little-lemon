@@ -15,7 +15,7 @@ function Hero() {
           recipes served with a modern twist.
         </p>
         <button className="primary-button primary-button--yellow">
-          <Link to="/reservation">Reserve a table</Link>
+          <Link to="/booking">Reserve a table</Link>
         </button>
       </div>
       <div className="hero__image-container">
