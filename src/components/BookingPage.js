@@ -2,7 +2,7 @@ import Header from './Header';
 import BookingForm from './BookingForm';
 import Footer from './Footer';
 
-function ReservationPage() {
+function BookingPage() {
   return (
     <>
       <Header />
@@ -12,4 +12,4 @@ function ReservationPage() {
   );
 }
 
-export default ReservationPage;
+export default BookingPage;

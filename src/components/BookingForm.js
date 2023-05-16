@@ -1,35 +1,64 @@
-import { useState } from 'react';
 import { useDataContext } from './DataContext';
 import { occasions } from '../utils/utilities';
+import '../styles/BookingForm.css';
 
 function BookingForm() {
-  const { availableTimes, dispatch } = useDataContext();
-  const [time, setTime] = useState('');
-  const [date, setDate] = useState('');
-  const [bookingOccasion, setBookingOccasion] = useState(occasions[0]);
-  const [numberOfGuests, setNumberOfGuests] = useState('1');
+  const { availableTimes, dispatch, formState, setFormState } =
+    useDataContext();
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log('form submitted');
-    console.log(date, time, bookingOccasion, numberOfGuests, availableTimes);
   }
 
   function handleDateChange(e) {
     const selectedDate = e.target.value;
-    setDate(selectedDate);
+    setFormState({ ...formState, date: selectedDate });
     dispatch({ type: 'UPDATE_TIMES', date: selectedDate });
   }
 
   return (
-    <>
-      <form onSubmit={handleSubmit}>
+    <section className="form-container">
+      <form onSubmit={handleSubmit} className="form">
+        <div className="title-container">
+          <h2 className="form-title">Reserve a table</h2>
+          <p className="form-description">
+            Enter the details for reservation in this page. You will receive an
+            email confirming the reservation as soon as possible.
+          </p>
+        </div>
+        <div className="input-container">
+          <label htmlFor="res-name">Name</label>
+          <input
+            type="text"
+            id="res-name"
+            value={formState.name}
+            onChange={(e) =>
+              setFormState({ ...formState, name: e.target.value })
+            }
+            name="res-name"
+            aria-label="name input"
+          />
+        </div>
+        <div className="input-container">
+          <label htmlFor="res-date">Email</label>
+          <input
+            type="email"
+            id="res-email"
+            value={formState.email}
+            onChange={(e) =>
+              setFormState({ ...formState, email: e.target.value })
+            }
+            name="res-email"
+            aria-label="email input"
+          />
+        </div>
         <div className="input-container">
           <label htmlFor="res-date">Choose Date</label>
           <input
             type="date"
             id="res-date"
-            value={date}
+            value={formState.date}
             onChange={handleDateChange}
             name="res-date"
             aria-label="date selection"
@@ -39,8 +68,10 @@ function BookingForm() {
           <label htmlFor="res-time">Choose Time</label>
           <select
             id="res-time"
-            value={time}
-            onChange={(e) => setTime(e.target.value)}
+            value={formState.time}
+            onChange={(e) =>
+              setFormState({ ...formState, time: e.target.value })
+            }
             name="res-time"
             aria-label="time selection"
           >
@@ -56,8 +87,10 @@ function BookingForm() {
           <input
             type="number"
             id="res-guests"
-            value={numberOfGuests}
-            onChange={(e) => setNumberOfGuests(e.target.value)}
+            value={formState.numberOfGuests}
+            onChange={(e) =>
+              setFormState({ ...formState, numberOfGuests: e.target.value })
+            }
             name="res-guests"
             placeholder="1"
             min="1"
@@ -69,8 +102,10 @@ function BookingForm() {
           <label htmlFor="res-occasion">Occasion</label>
           <select
             id="res-occasion"
-            value={bookingOccasion}
-            onChange={(e) => setBookingOccasion(e.target.value)}
+            value={formState.bookingOccasion}
+            onChange={(e) =>
+              setFormState({ ...formState, bookingOccasion: e.target.value })
+            }
             name="res-occasion"
             aria-label="occasion selection"
           >
@@ -87,7 +122,7 @@ function BookingForm() {
           aria-label="submit reservation button"
         />
       </form>
-    </>
+    </section>
   );
 }
 
