@@ -1,27 +1,23 @@
-import { createContext, useContext, useReducer, useState } from 'react';
+import { createContext, useContext, useReducer } from 'react';
+import { fetchAPI } from '../utils/mockAPI';
 
 const DataContext = createContext(undefined);
 
-const initialTimes = ['17:00', '18:00', '19:00', '20:00', '21:00'];
+function initializeTimes() {
+  const today = new Date();
+  return fetchAPI(today);
+}
 
-const initializeTimes = () => initialTimes;
-
-const updateTimes = (state, action) => {
-  console.log('reducer', state);
-  if (action.type === 'UPDATE_TIMES') return [...state, state];
+function updateTimes(state, action) {
+  if (action.type === 'UPDATE_TIMES') return fetchAPI(new Date(action.date));
   else return state;
-};
+}
 
 export function DataContextProvider({ children }) {
-  const [date, setDate] = useState('');
-  const [availableTimes, dispatch] = useReducer(
-    updateTimes,
-    initialTimes,
-    initializeTimes
-  );
+  const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
 
   return (
-    <DataContext.Provider value={{ availableTimes, dispatch, date, setDate }}>
+    <DataContext.Provider value={{ availableTimes, dispatch }}>
       {children}
     </DataContext.Provider>
   );

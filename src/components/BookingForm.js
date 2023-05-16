@@ -1,20 +1,24 @@
 import { useState } from 'react';
 import { useDataContext } from './DataContext';
-
-const occasions = ['', 'Birthday', 'Anniversary'];
+import { occasions } from '../utils/utilities';
 
 function BookingForm() {
-  const { availableTimes, dispatch, date, setDate } = useDataContext();
-
+  const { availableTimes, dispatch } = useDataContext();
   const [time, setTime] = useState('');
-
+  const [date, setDate] = useState('');
   const [bookingOccasion, setBookingOccasion] = useState(occasions[0]);
   const [numberOfGuests, setNumberOfGuests] = useState('1');
 
   function handleSubmit(e) {
     e.preventDefault();
     console.log('form submitted');
-    console.log(date, time, bookingOccasion, numberOfGuests);
+    console.log(date, time, bookingOccasion, numberOfGuests, availableTimes);
+  }
+
+  function handleDateChange(e) {
+    const selectedDate = e.target.value;
+    setDate(selectedDate);
+    dispatch({ type: 'UPDATE_TIMES', date: selectedDate });
   }
 
   return (
@@ -26,10 +30,7 @@ function BookingForm() {
             type="date"
             id="res-date"
             value={date}
-            onChange={(e) => {
-              setDate(e.target.value);
-              dispatch({ type: 'UPDATE_TIMES' });
-            }}
+            onChange={handleDateChange}
             name="res-date"
             aria-label="date selection"
           />
