@@ -1,13 +1,25 @@
+import { useNavigate } from 'react-router-dom';
 import { useDataContext } from './DataContext';
+import { submitAPI } from '../utils/mockAPI';
 import { occasions } from '../utils/utilities';
+
 import '../styles/BookingForm.css';
 
 function BookingForm() {
   const { availableTimes, dispatch, formState, setFormState } =
     useDataContext();
 
+  const navigate = useNavigate();
+
+  function submitForm(formData) {
+    const response = submitAPI(formData);
+    if (response) navigate('/confirmation');
+    else throw new Error('Error in confirmation');
+  }
+
   function handleSubmit(e) {
     e.preventDefault();
+    submitForm(formState);
     console.log('form submitted');
   }
 
@@ -116,6 +128,7 @@ function BookingForm() {
             ))}
           </select>
         </div>
+
         <input
           className="primary-button primary-button--yellow"
           type="submit"

@@ -8,7 +8,7 @@ export function initializeTimes() {
   return fetchAPI(today);
 }
 
-function updateTimes(state, action) {
+export function updateTimes(state, action) {
   if (action.type === 'UPDATE_TIMES') return fetchAPI(new Date(action.date));
   else return state;
 }
