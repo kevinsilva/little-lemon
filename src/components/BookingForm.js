@@ -13,8 +13,12 @@ function BookingForm() {
 
   function submitForm(formData) {
     const response = submitAPI(formData);
-    if (response) navigate('/confirmation');
-    else throw new Error('Error in confirmation');
+    if (response) {
+      localStorage.setItem('formData', JSON.stringify(formData));
+      navigate('/confirmation');
+    } else {
+      throw new Error('Error in confirmation');
+    }
   }
 
   function handleSubmit(e) {
