@@ -2,7 +2,7 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  height: 10rem;
+  height: 8rem;
   margin-bottom: 10rem;
 }
 
@@ -120,9 +120,6 @@
 }
 
 @media only screen and (max-width: 62.5em) {
-  .header {
-    margin-bottom: 24rem;
-  }
   .header__nav {
     display: none;
   }

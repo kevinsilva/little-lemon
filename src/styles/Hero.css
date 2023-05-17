@@ -84,6 +84,7 @@
 
 @media only screen and (max-width: 62.5em) {
   .hero {
+    margin-top: 15rem;
     flex-direction: column;
     align-items: center;
   }

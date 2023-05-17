@@ -1,0 +1,56 @@
+.confirmation {
+  display: flex;
+  justify-content: center;
+  flex-grow: 1;
+}
+.confirmation-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 80rem;
+  padding: 0 5rem;
+}
+
+.confirmation-header {
+  border-bottom: 1px solid var(--color-highlight-4);
+}
+
+.confirmation-title {
+  margin-bottom: 1rem;
+}
+
+.confirmation-message {
+  color: var(--color-primary-1);
+  margin-bottom: 3rem;
+}
+
+.confirmation-message span {
+  font-weight: 700;
+}
+
+.confirmation-photo {
+  width: 100%;
+  margin-bottom: 2rem;
+}
+
+.confirmation-details {
+  margin: 3rem 0;
+  padding: 2rem;
+  align-self: flex-start;
+  width: 100%;
+  background-color: var(--color-highlight-1);
+}
+
+.details-title {
+  margin-bottom: 1rem;
+}
+
+.confirmation-details p {
+  color: var(--color-secondary-1);
+}
+
+.confirmation .primary-button {
+  margin-top: 3rem;
+  margin-bottom: 15rem;
+}
