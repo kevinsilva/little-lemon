@@ -117,6 +117,7 @@ function BookingForm() {
           </select>
         </div>
         <input
+          className="primary-button primary-button--yellow"
           type="submit"
           value="Make your reservation"
           aria-label="submit reservation button"

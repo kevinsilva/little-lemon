@@ -1,6 +1,5 @@
 .form-container {
   display: flex;
-
   justify-content: center;
   flex-grow: 1;
   margin-bottom: 15rem;
@@ -19,13 +18,41 @@
 }
 
 .form-title {
+  margin-bottom: 1rem;
 }
 
 .form-description {
+  color: var(--color-primary-1);
+  margin-bottom: 3rem;
+  padding-bottom: 6rem;
+  border-bottom: 1px solid var(--color-highlight-4);
 }
 
 .input-container {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.input-container label {
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.input-container input,
+.input-container select {
+  color: var(--color-primary-1);
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border: 1px solid var(--color-highlight-3);
+}
+
+.input-container input:focus,
+.input-container select:focus {
+  border: 1px solid var(--color-highlight-2);
+  outline: none;
+}
+
+.form .primary-button {
+  margin-top: 3rem;
 }
