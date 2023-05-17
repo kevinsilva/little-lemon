@@ -3,7 +3,7 @@ import { fetchAPI } from '../utils/mockAPI';
 
 const DataContext = createContext(undefined);
 
-function initializeTimes() {
+export function initializeTimes() {
   const today = new Date();
   return fetchAPI(today);
 }
