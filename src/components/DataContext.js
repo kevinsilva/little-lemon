@@ -1,5 +1,6 @@
 import { createContext, useContext, useReducer, useState } from 'react';
 import { fetchAPI } from '../utils/mockAPI';
+import { initialFormState } from '../utils/utilities';
 
 const DataContext = createContext(undefined);
 
@@ -15,14 +16,7 @@ export function updateTimes(state, action) {
 
 export function DataContextProvider({ children }) {
   const [availableTimes, dispatch] = useReducer(updateTimes, initializeTimes());
-  const [formState, setFormState] = useState({
-    name: '',
-    email: '',
-    time: '',
-    date: '',
-    bookingOccasion: '',
-    numberOfGuests: '1',
-  });
+  const [formState, setFormState] = useState(initialFormState);
 
   return (
     <DataContext.Provider

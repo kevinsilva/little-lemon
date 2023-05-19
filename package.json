@@ -36,7 +36,11 @@
       "last 1 safari version"
     ]
   },
+  "jest": {
+    "resetMocks": false
+  },
   "devDependencies": {
+    "jest-localstorage-mock": "^2.4.26",
     "prettier": "2.8.8"
   }
 }

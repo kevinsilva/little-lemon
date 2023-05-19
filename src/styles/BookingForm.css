@@ -56,3 +56,19 @@
 .form .primary-button {
   margin-top: 3rem;
 }
+
+/* #submit-button.disabled,
+#submit-button:hover.disabled {
+  cursor: not-allowed;
+  opacity: 0.6;
+  filter: none;
+  transform: none;
+} */
+
+#submit-button:disabled,
+#submit-button:disabled:hover {
+  cursor: not-allowed;
+  opacity: 0.6;
+  filter: none;
+  transform: none;
+}

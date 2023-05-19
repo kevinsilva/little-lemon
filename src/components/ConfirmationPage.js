@@ -1,9 +1,16 @@
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import restaurant from '../assets/restaurant.jpg';
 import '../styles/BookingPage.css';
 
 function ConfirmationPage() {
-  const formData = JSON.parse(localStorage.getItem('formData'));
+  const [formData, setFormData] = useState('');
+  useEffect(() => {
+    const storedData = localStorage.getItem('formData');
+
+    if (storedData) setFormData(JSON.parse(storedData));
+  }, []);
+
   return (
     <div className="confirmation">
       <div className="confirmation-container">

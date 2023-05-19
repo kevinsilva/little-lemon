@@ -1,30 +1,48 @@
 import { useNavigate } from 'react-router-dom';
 import { useDataContext } from './DataContext';
+import { useState, useEffect } from 'react';
+import ErrorMsg from './ErrorMsg';
 import { submitAPI } from '../utils/mockAPI';
-import { occasions } from '../utils/utilities';
+import { initialFormState, occasions } from '../utils/utilities';
 
 import '../styles/BookingForm.css';
 
 function BookingForm() {
   const { availableTimes, dispatch, formState, setFormState } =
     useDataContext();
+  const [error, setError] = useState(true);
+
+  useEffect(() => {
+    const isValid =
+      formState.name &&
+      formState.email &&
+      formState.time &&
+      formState.date &&
+      formState.numberOfGuests;
+
+    if (isValid) setError(false);
+  }, [formState]);
 
   const navigate = useNavigate();
 
   function submitForm(formData) {
     const response = submitAPI(formData);
+
     if (response) {
+      setError(false);
+
       localStorage.setItem('formData', JSON.stringify(formData));
       navigate('/confirmation');
+      setFormState(initialFormState);
     } else {
-      throw new Error('Error in confirmation');
+      setError(true);
+      console.log('Error submitting data');
     }
   }
 
   function handleSubmit(e) {
     e.preventDefault();
     submitForm(formState);
-    console.log('form submitted');
   }
 
   function handleDateChange(e) {
@@ -54,6 +72,7 @@ function BookingForm() {
             }
             name="res-name"
             aria-label="name input"
+            required
           />
         </div>
         <div className="input-container">
@@ -67,6 +86,7 @@ function BookingForm() {
             }
             name="res-email"
             aria-label="email input"
+            required
           />
         </div>
         <div className="input-container">
@@ -78,6 +98,7 @@ function BookingForm() {
             onChange={handleDateChange}
             name="res-date"
             aria-label="date selection"
+            required
           />
         </div>
         <div className="input-container">
@@ -90,6 +111,7 @@ function BookingForm() {
             }
             name="res-time"
             aria-label="time selection"
+            required
           >
             {availableTimes.map((availableTime) => (
               <option key={availableTime} value={availableTime}>
@@ -112,6 +134,7 @@ function BookingForm() {
             min="1"
             max="10"
             aria-label="number of guests input"
+            required
           />
         </div>
         <div className="input-container">
@@ -132,13 +155,16 @@ function BookingForm() {
             ))}
           </select>
         </div>
-
-        <input
+        <ErrorMsg children={'Please enter your details!'} error={error} />
+        <button
+          id="submit-button"
           className="primary-button primary-button--yellow"
           type="submit"
-          value="Make your reservation"
           aria-label="submit reservation button"
-        />
+          disabled={error}
+        >
+          Make your reservation
+        </button>
       </form>
     </section>
   );

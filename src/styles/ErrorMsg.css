@@ -1,0 +1,13 @@
+.visible {
+  visibility: visible;
+}
+
+.hidden {
+  visibility: hidden;
+}
+
+.error-msg {
+  color: red;
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
