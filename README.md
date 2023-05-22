@@ -1,70 +1,76 @@
-# Getting Started with Create React App
+<p align="center"><img src="./src/assets/logo.svg" width="300"></p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<div align="center">
 
-## Available Scripts
+<a href="">[![Open in CodeSandbox](https://img.shields.io/badge/Open%20in-CodeSandbox-success?style=flat-square&logo=codesandbox)]()</a>
 
-In the project directory, you can run:
+</div>
 
-### `npm start`
+ A React front-end application for making restaurant reservations.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Little Lemon Booking App allows users to reserve a table at a restaurant. It provides a clean responsive interface that includes form validation and accessability features to provide an inclusive user experience.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Implementation Details
 
-### `npm test`
+This document features the final project for [Meta's Front-End Developer Professional Certificate](https://www.coursera.org/professional-certificates/meta-front-end-developer).
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project started by planning the UI/UX, taking into account a list of client's requirements. A wireframe was developed using [Figma](https://www.figma.com/), followed by a mock-up, that adhered to the provided [Brand Style Guide](./src/assets/ui_kit.svg). I establishing typographic hierarchy and resorted to permissible color palette, designing a clean modern interface.
 
-### `npm run build`
+Emphasizing the project structural foundation, I have focused on semantic HTML5 tags and [Open Graph Protocol](https://ogp.me/) settings. This ensured solid foundation for the functionality of the project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The project core functionality is a form table reservation system. The data validation was implemented using a combination of HTML5 validation and controlled component validation, with the latter allowing button submission only when all required inputs are filled. The specific input type validations are then handled by HTML5, adding an extra layer of validation. When the data is validated, it adds data to the local storage and redirects to a confirmation page with 'useNavigate'. Unit tests were implemented using [React Testing Library](https://testing-library.com/docs/react-testing-library/intro/).
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+This project showcases the skills and knowledge gained throughout the program, specifically: UI/UX design, semantic code structure, data validation, [React's](https://react.dev/) component creation and organization, and unit testing.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+## Usage
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+The main functionality of the reservation system revolves around three components: 'BookingForm', 'DataContext' and 'ConfirmationPage'.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1 - BookingForm
+- This component uses the 'useDataContext' custom hook to access shared data, including the 'availableTimes' and the other 'formState'data values. The 'handleDateChange' function uses the dispatch and reducer function to update the values returned by the API.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- A 'submitForm function' is called when the form is submitted, which sends the form data to a mock 'submitAPI' call.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+2 - DataContext
 
-## Learn More
+- It initializes the 'availableTimes' function state by making an API call that fetches available times for table reservations.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- The 'availableTimes' state is managed by using the 'updateTimes' reducer function, which is called when the dispatch function is invoked.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+3 - ConfirmationPage
 
-### Code Splitting
+- This component retrieves stored form data from 'localStorage' and displays the confirmation details after a successful reservation.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+- It provides a link to the homepage using the 'Link' component from [react-router-dom](https://www.npmjs.com/package/react-router-dom)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+> **! Note**
+>
+> Production build on the dist folder.
 
-### Making a Progressive Web App
+## Development
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+To install the component, clone repository, change into directory on the terminal and install with npm.
 
-### Advanced Configuration
+```bash
+git clone https://github.com/kevinsilva/meta_capstone
+cd meta_capstone
+npm install
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+To run the application.
 
-### Deployment
+```bash
+  npm run start
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+To run the tests.
 
-### `npm run build` fails to minify
+```bash
+  npm run test
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
