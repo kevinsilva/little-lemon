@@ -54,8 +54,8 @@ The main functionality of the reservation system revolves around three component
 To install the component, clone repository, change into directory on the terminal and install with npm.
 
 ```bash
-git clone https://github.com/kevinsilva/meta_capstone
-cd meta_capstone
+git clone https://github.com/kevinsilva/little-lemon
+cd little-lemon
 npm install
 ```
 
