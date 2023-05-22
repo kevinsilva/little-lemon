@@ -5,9 +5,9 @@ import '../styles/BookingPage.css';
 
 function ConfirmationPage() {
   const [formData, setFormData] = useState('');
+
   useEffect(() => {
     const storedData = localStorage.getItem('formData');
-
     if (storedData) setFormData(JSON.parse(storedData));
   }, []);
 
