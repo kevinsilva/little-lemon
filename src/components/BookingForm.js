@@ -71,7 +71,7 @@ function BookingForm() {
               setFormState({ ...formState, name: e.target.value })
             }
             name="res-name"
-            aria-label="name input"
+            aria-label="Name Input"
             required
           />
         </div>
@@ -85,7 +85,7 @@ function BookingForm() {
               setFormState({ ...formState, email: e.target.value })
             }
             name="res-email"
-            aria-label="email input"
+            aria-label="Email Input"
             required
           />
         </div>
@@ -97,7 +97,7 @@ function BookingForm() {
             value={formState.date}
             onChange={handleDateChange}
             name="res-date"
-            aria-label="date selection"
+            aria-label="Date Selection"
             required
           />
         </div>
@@ -110,7 +110,7 @@ function BookingForm() {
               setFormState({ ...formState, time: e.target.value })
             }
             name="res-time"
-            aria-label="time selection"
+            aria-label="Time Selection"
             required
           >
             {availableTimes.map((availableTime) => (
@@ -133,7 +133,7 @@ function BookingForm() {
             placeholder="1"
             min="1"
             max="10"
-            aria-label="number of guests input"
+            aria-label="Number of Guests Input"
             required
           />
         </div>
@@ -146,7 +146,7 @@ function BookingForm() {
               setFormState({ ...formState, bookingOccasion: e.target.value })
             }
             name="res-occasion"
-            aria-label="occasion selection"
+            aria-label="Occasion Selection"
           >
             {occasions.map((occasion) => (
               <option key={occasion} value={occasion}>
@@ -160,7 +160,7 @@ function BookingForm() {
           id="submit-button"
           className="primary-button primary-button--yellow"
           type="submit"
-          aria-label="submit reservation button"
+          aria-label="Submit Reservation Button"
           disabled={error}
         >
           Make your reservation

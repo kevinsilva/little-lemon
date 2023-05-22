@@ -46,7 +46,7 @@ function ConfirmationPage() {
         <Link
           to="/"
           className="primary-button primary-button--yellow"
-          aria-label="homepage button"
+          aria-label="Homepage button"
         >
           Go To Homepage
         </Link>

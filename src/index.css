@@ -3,6 +3,7 @@
 :root {
   --color-primary-1: rgb(73, 94, 87);
   --color-primary-2: rgb(244, 206, 20);
+  --color-secondary-0: rgb(237, 120, 66);
   --color-secondary-1: rgb(238, 153, 114);
   --color-secondary-2: rgb(251, 218, 187);
   --color-highlight-1: rgb(237, 239, 238);
@@ -10,13 +11,11 @@
   --color-highlight-3: rgb(204, 204, 204);
   --color-highlight-4: rgb(190, 190, 190);
 
-  /* --type-title: 40pt;
-  --type-lead: 18pt;
-  --type-text: 16pt;
-*/
-  --type-title: 40px;
-  --type-lead: 18px;
-  --type-text: 16px;
+  --type-title: 6.4rem;
+  --type-subtitle: 4rem;
+  --type-regular: 2rem;
+  --type-lead: 1.8rem;
+  --type-text: 1.6rem;
 }
 
 * {

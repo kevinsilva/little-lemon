@@ -17,22 +17,22 @@
   z-index: 4;
 }
 
-.header__nav {
+.header-nav {
   display: flex;
 }
 
-.header__list {
+.header-list {
   display: flex;
   align-items: center;
   position: relative;
   z-index: 4;
 }
 
-.header__item {
+.header-item {
   margin-right: 2rem;
 }
 
-.header__item:hover {
+.header-item:hover {
   border-bottom: 0.1rem solid var(--color-highlight-2);
 }
 
@@ -43,20 +43,20 @@
   cursor: pointer;
 }
 
-.menu__checkbox {
+.menu-checkbox {
   display: none;
 }
 
-.menu__button {
+.menu-button {
   display: none;
   order: 2;
   padding: 2rem;
   cursor: pointer;
 }
 
-.menu__icon,
-.menu__icon::before,
-.menu__icon::after {
+.menu-icon,
+.menu-icon::before,
+.menu-icon::after {
   width: 2.5rem;
   height: 0.3rem;
   background-color: var(--color-highlight-2);
@@ -64,29 +64,29 @@
   position: relative;
 }
 
-.menu__icon::before,
-.menu__icon::after {
+.menu-icon::before,
+.menu-icon::after {
   content: '';
   position: absolute;
   left: 0;
   transition: all 0.2s;
 }
 
-.menu__icon::before {
+.menu-icon::before {
   top: -0.8rem;
 }
 
-.menu__icon::after {
+.menu-icon::after {
   top: 0.8rem;
 }
 
-.menu__checkbox:checked ~ .header__nav {
+.menu-checkbox:checked ~ .header-nav {
   display: flex;
   position: absolute;
   top: 10rem;
 }
 
-.menu__checkbox:checked ~ .header__nav .header__list {
+.menu-checkbox:checked ~ .header-nav .header-list {
   background-color: var(--color-primary-1);
   color: var(--color-highlight-1);
   width: 100vw;
@@ -94,21 +94,21 @@
   justify-content: center;
 }
 
-.menu__checkbox:checked + .menu__button .menu__icon {
+.menu-checkbox:checked + .menu-button .menu-icon {
   background-color: transparent;
 }
 
-.menu__checkbox:checked + .menu__button .menu__icon::before {
+.menu-checkbox:checked + .menu-button .menu-icon::before {
   top: 0;
   transform: rotate(135deg);
 }
 
-.menu__checkbox:checked + .menu__button .menu__icon::after {
+.menu-checkbox:checked + .menu-button .menu-icon::after {
   top: 0;
   transform: rotate(-135deg);
 }
 
-.menu__background {
+.menu-background {
   width: 100vw;
   height: 100vh;
   background-color: white;
@@ -120,15 +120,15 @@
 }
 
 @media only screen and (max-width: 62.5em) {
-  .header__nav {
+  .header-nav {
     display: none;
   }
 
-  .menu__button {
+  .menu-button {
     display: flex;
   }
 
-  .header__item:hover {
+  .header-item:hover {
     border-bottom: 0.1rem solid white;
   }
 }

@@ -63,7 +63,7 @@ describe('Booking Form', () => {
     const nameInput = screen.getByLabelText('Name');
     fireEvent.change(nameInput, { target: { value: 'Kevin Silva' } });
 
-    const emailInput = screen.getByLabelText('email input');
+    const emailInput = screen.getByLabelText('Email Input');
     fireEvent.change(emailInput, { target: { value: 'kevin@gmail.com' } });
 
     const dateInput = screen.getByLabelText('Choose Date');
@@ -72,7 +72,7 @@ describe('Booking Form', () => {
     const timeInput = screen.getByLabelText('Choose Time');
     fireEvent.change(timeInput, { target: { value: '17:00' } });
 
-    const guestsInput = screen.getByLabelText('number of guests input');
+    const guestsInput = screen.getByLabelText('Number of Guests Input');
     fireEvent.change(guestsInput, { target: { value: '1' } });
 
     const submitInput = screen.getByText('Make your reservation');
@@ -106,7 +106,7 @@ describe('Booking Form', () => {
       expect(nameInput).toHaveAttribute('required');
       expect(nameInput).toHaveAttribute('type', 'text');
 
-      const emailInput = screen.getByLabelText('email input');
+      const emailInput = screen.getByLabelText('Email Input');
       expect(emailInput).toHaveAttribute('required');
       expect(emailInput).toHaveAttribute('type', 'email');
 
@@ -117,7 +117,7 @@ describe('Booking Form', () => {
       const timeInput = screen.getByLabelText('Choose Time');
       expect(timeInput).toHaveAttribute('required');
 
-      const guestsInput = screen.getByLabelText('number of guests input');
+      const guestsInput = screen.getByLabelText('Number of Guests Input');
       expect(guestsInput).toHaveAttribute('required');
       expect(guestsInput).toHaveAttribute('min', '1');
       expect(guestsInput).toHaveAttribute('max', '10');
@@ -133,7 +133,7 @@ describe('Booking Form', () => {
       const nameInput = screen.getByLabelText('Name');
       fireEvent.change(nameInput, { target: { value: 'Kevin Silva' } });
 
-      const emailInput = screen.getByLabelText('email input');
+      const emailInput = screen.getByLabelText('Email Input');
       fireEvent.change(emailInput, { target: { value: 'kevin@gmail.com' } });
 
       const dateInput = screen.getByLabelText('Choose Date');
@@ -142,7 +142,7 @@ describe('Booking Form', () => {
       const timeInput = screen.getByLabelText('Choose Time');
       fireEvent.change(timeInput, { target: { value: '17:00' } });
 
-      const guestsInput = screen.getByLabelText('number of guests input');
+      const guestsInput = screen.getByLabelText('Number of Guests Input');
       fireEvent.change(guestsInput, { target: { value: '1' } });
 
       const submitInput = screen.getByText('Make your reservation');
@@ -170,7 +170,7 @@ describe('Booking Form', () => {
       const nameInput = screen.getByLabelText('Name');
       fireEvent.change(nameInput, { target: { value: 'Kevin' } });
 
-      const emailInput = screen.getByLabelText('email input');
+      const emailInput = screen.getByLabelText('Email Input');
       fireEvent.change(emailInput, { target: { value: 'kevin.email.com' } });
 
       const submitInput = screen.getByText('Make your reservation');

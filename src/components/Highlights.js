@@ -6,26 +6,26 @@ import '../styles/Highlights.css';
 function Highlights() {
   return (
     <section className="highlights">
-      <div className="highlights__header">
-        <h2 className="highlights__title">This Week's Specials</h2>
+      <div className="highlights-header">
+        <h2 className="highlights-title">This Week's Specials</h2>
         <button className="primary-button primary-button--yellow">Menu</button>
       </div>
-      <div className="highlights__content">
-        <div className="highlights__card">
-          <div className="highlights__card-image-container">
+      <div className="highlights-content">
+        <div className="highlights-card">
+          <div className="highlights-card-image-container">
             <img
               src={greekSalad}
               alt="Greek Salad"
-              className="highlights__card-image"
+              className="highlights-card-image"
             />
           </div>
-          <div className="highlights__card-content">
-            <div className="highlights__card-header">
-              <h4 className="highlights__card-title">Greek Salad</h4>
-              <p className="highlights__card-price">10.99$</p>
+          <div className="highlights-card-content">
+            <div className="highlights-card-header">
+              <h4 className="highlights-card-title">Greek Salad</h4>
+              <p className="highlights-card-price">10.99$</p>
             </div>
-            <div className="highlights__card-main">
-              <p className="highlights__card-description">
+            <div className="highlights-card-main">
+              <p className="highlights-card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
                 illo vero ullam autem fugit placeat.
@@ -34,21 +34,21 @@ function Highlights() {
             </div>
           </div>
         </div>
-        <div className="highlights__card">
-          <div className="highlights__card-image-container">
+        <div className="highlights-card">
+          <div className="highlights-card-image-container">
             <img
               src={bruschetta}
               alt="Bruschetta"
-              className="highlights__card-image"
+              className="highlights-card-image"
             />
           </div>
-          <div className="highlights__card-content">
-            <div className="highlights__card-header">
-              <h4 className="highlights__card-title">Bruschetta</h4>
-              <p className="highlights__card-price">10.99$</p>
+          <div className="highlights-card-content">
+            <div className="highlights-card-header">
+              <h4 className="highlights-card-title">Bruschetta</h4>
+              <p className="highlights-card-price">10.99$</p>
             </div>
-            <div className="highlights__card-main">
-              <p className="highlights__card-description">
+            <div className="highlights-card-main">
+              <p className="highlights-card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
                 illo vero ullam autem fugit placeat.
@@ -57,21 +57,21 @@ function Highlights() {
             </div>
           </div>
         </div>
-        <div className="highlights__card">
-          <div className="highlights__card-image-container">
+        <div className="highlights-card">
+          <div className="highlights-card-image-container">
             <img
               src={lemonDessert}
               alt="Lemon Dessert"
-              className="highlights__card-image"
+              className="highlights-card-image"
             />
           </div>
-          <div className="highlights__card-content">
-            <div className="highlights__card-header">
-              <h4 className="highlights__card-title">Lemon Dessert</h4>
-              <p className="highlights__card-price">10.99$</p>
+          <div className="highlights-card-content">
+            <div className="highlights-card-header">
+              <h4 className="highlights-card-title">Lemon Dessert</h4>
+              <p className="highlights-card-price">10.99$</p>
             </div>
-            <div className="highlights__card-main">
-              <p className="highlights__card-description">
+            <div className="highlights-card-main">
+              <p className="highlights-card-description">
                 Lorem ipsum, dolor sit amet consectetur adipisicing elit.
                 Nesciunt accusamus similique provident sint neque sit mollitia,
                 illo vero ullam autem fugit placeat.

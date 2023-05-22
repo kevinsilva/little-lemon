@@ -8,34 +8,42 @@ function Header() {
       <Link to="/" className="logo-link">
         <img src={logo} alt="logo" className="primary-logo" />
       </Link>
-      <input type="checkbox" className="menu__checkbox" id="menu-toggle" />
-      <label htmlFor="menu-toggle" className="menu__button">
-        <span className="menu__icon">&nbsp;</span>
+      <input type="checkbox" className="menu-checkbox" id="menu-toggle" />
+      <label
+        htmlFor="menu-toggle"
+        className="menu-button"
+        aria-label="Toggle Menu"
+      >
+        <span className="menu-icon">&nbsp;</span>
       </label>
-      <nav className="header__nav">
-        <ul className="header__list">
-          <li className="header__item">
-            <Link to="/" className="header__link">
+      <nav className="header-nav">
+        <ul className="header-list">
+          <li className="header-item">
+            <Link to="/" className="header-link" aria-label="Home">
               Home
             </Link>
           </li>
-          <li className="header__item">
-            <a href="#about" className="header__link">
+          <li className="header-item">
+            <a href="#about" className="header-link" aria-label="About">
               About
             </a>
           </li>
-          <li className="header__item">
-            <a href="#menu" className="header__link">
+          <li className="header-item">
+            <a href="#menu" className="header-link" aria-label="Menu">
               Menu
             </a>
           </li>
-          <li className="header__item">
-            <Link to="/booking" className="header__link">
+          <li className="header-item">
+            <Link
+              to="/booking"
+              className="header-link"
+              aria-label="Reservations"
+            >
               Reservations
             </Link>
           </li>
-          <li className="header__item">
-            <a href="#login" className="header__link">
+          <li className="header-item">
+            <a href="#login" className="header-link" aria-label="Login">
               Login
             </a>
           </li>

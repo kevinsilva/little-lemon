@@ -1,82 +1,90 @@
 import { Link } from 'react-router-dom';
-import Logo3 from '../assets/logo_3.png';
+import Logo2 from '../assets/logo_2.png';
 import '../styles/Footer.css';
 
 function Footer() {
   return (
     <footer className="footer">
-      <img src={Logo3} alt="logo" className="footer__logo" />
-      <nav className="footer__nav">
-        <section className="footer__nav-section">
-          <h4 className="footer__nav-section-title">Navigation</h4>
-          <ul className="footer__nav-section-list">
-            <li className="footer__nav-section-item">
-              <Link to="/" className="footer__nav-section-link">
+      <img src={Logo2} alt="logo" className="footer-logo" />
+      <nav className="footer-nav">
+        <section className="footer-nav-section">
+          <h4 className="footer-nav-section-title">Navigation</h4>
+          <ul className="footer-nav-section-list">
+            <li className="footer-nav-section-item">
+              <Link
+                to="/"
+                className="footer-nav-section-link"
+                aria-label="Home"
+              >
                 Home
               </Link>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#about.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#about.html">
                 About
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#menu.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#menu.html">
                 Menu
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <Link to="/booking" className="footer__nav-section-link">
+            <li className="footer-nav-section-item">
+              <Link
+                to="/booking"
+                className="footer-nav-section-link"
+                aria-label="Reservations"
+              >
                 Reservations
               </Link>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#order.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#order.html">
                 Order Online
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#login.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#login.html">
                 Login
               </a>
             </li>
           </ul>
         </section>
-        <section className="footer__nav-section">
-          <h4 className="footer__nav-section-title">Contact</h4>
-          <ul className="footer__nav-section-list">
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#address.html">
+        <section className="footer-nav-section">
+          <h4 className="footer-nav-section-title">Contact</h4>
+          <ul className="footer-nav-section-list">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#address.html">
                 Address
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#phone.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#phone.html">
                 Phone Number
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#email.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#email.html">
                 Email
               </a>
             </li>
           </ul>
         </section>
-        <section className="footer__nav-section">
-          <h4 className="footer__nav-section-title">Social Media</h4>
-          <ul className="footer__nav-section-list">
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#address.html">
+        <section className="footer-nav-section">
+          <h4 className="footer-nav-section-title">Social Media</h4>
+          <ul className="footer-nav-section-list">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#address.html">
                 Address
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#phone.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#phone.html">
                 Phone Number
               </a>
             </li>
-            <li className="footer__nav-section-item">
-              <a className="footer__nav-section-link" href="#email.html">
+            <li className="footer-nav-section-item">
+              <a className="footer-nav-section-link" href="#email.html">
                 Email
               </a>
             </li>
