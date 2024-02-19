@@ -3,8 +3,10 @@ import Main from './components/Main';
 import BookingPage from './components/BookingPage';
 import ConfirmedBooking from './components/ConfirmedBooking';
 import './App.css';
+import useAnalytics from './analytics/useAnalytics';
 
 function App() {
+  useAnalytics();
   return (
     <Router>
       <Routes>
